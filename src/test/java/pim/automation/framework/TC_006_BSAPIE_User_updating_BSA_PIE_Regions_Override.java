@@ -1,5 +1,10 @@
 package pim.automation.framework;
 
+/************************************************
+TC 06 - User updating "BSA PIE Regions (Override)"
+Descrption - This updates the value in BSA PIE Regions (Override)
+and approves the record
+************************************************/
 import static org.junit.Assert.assertTrue;
 import java.io.IOException;
 import java.time.Duration;
@@ -36,7 +41,6 @@ public class TC_006_BSAPIE_User_updating_BSA_PIE_Regions_Override extends BaseTe
 		test.assignAuthor(System.getProperty("user.name")).assignCategory("Regression").assignDevice(System.getenv("COMPUTERNAME"));
 
 		homePage = new HomePage(driver);
-		Login_Page loginPage = new Login_Page(driver);
 		SearchPage2 searchPage = new SearchPage2(driver);
 		SummaryPage summaryPage = new SummaryPage(driver);
 		DigitalAsset digitalssetPage = new DigitalAsset(driver);
@@ -54,7 +58,7 @@ public class TC_006_BSAPIE_User_updating_BSA_PIE_Regions_Override extends BaseTe
 
 		utils.waitForElement(() -> searchPage.getgrid(), "clickable");
 
-		String Materialdata = loginPage.getProperty("BSAPIEUsecaseSalesOrgRegionsOverride");
+		String Materialdata = Login_Page.getProperty("BSAPIEUsecaseSalesOrgRegionsOverride");
 		searchPage.searchthingdomain_Input_Mat_Id().click();
 		searchPage.searchthingdomain_Input_Mat_Id().clear();
 		searchPage.searchthingdomain_Input_Mat_Id().sendKeys(Materialdata);

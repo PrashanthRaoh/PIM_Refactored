@@ -1,5 +1,9 @@
 package pim.automation.framework;
 
+/************************************************
+TC 02 - Updating BSA PIE record which is in  "BSA PIE Pending UseCase Approval" Workflow.
+Descrption - This approves BSA PIE Pending UseCase Approval the record
+************************************************/
 import static org.junit.Assert.assertTrue;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -51,7 +55,7 @@ public class TC_005_BSAPIE_Pending_UseCase_Approval extends BaseTest {
 
 		utils.waitForElement(() -> searchPage.getgrid(), "clickable");
 
-		String Materialdata = loginPage.getProperty("BSAPendingUsecaseApproval_Matid");
+		String Materialdata = Login_Page.getProperty("BSAPendingUsecaseApproval_Matid");
 		searchPage.searchthingdomain_Input_Mat_Id().click();
 		searchPage.searchthingdomain_Input_Mat_Id().clear();
 		searchPage.searchthingdomain_Input_Mat_Id().sendKeys(Materialdata);

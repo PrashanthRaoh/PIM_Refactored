@@ -1,5 +1,9 @@
 package pim.automation.framework;
 
+/************************************************
+TC 07 - Validated"On Hold-BSA PIE(User Select)" workflow should not get trigger when DQ check get fail.
+Descrption - Just lists the hold items.
+************************************************/
 import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
@@ -52,7 +56,7 @@ public class TC_003_BSAPIE_Test extends BaseTest {
 		utils.waitForElement(() -> homePage.BSAPIEUsecaseApprovalTab(), "visible");
 
 		/**************************************************
-		 * ***** Verify that logged in user is BSAPIEowner
+		 * ***** Click Use case approval tab
 		 **************************************************/
 		Thread.sleep(5000);
 		homePage.BSAPIEUsecaseApprovalTab().click();

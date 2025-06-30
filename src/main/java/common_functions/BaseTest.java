@@ -36,7 +36,7 @@ public class BaseTest {
 	public static Login_Page loginPage;
 	public HomePage homePage;
 	public static ExtentReports extentreport;
-	protected  static ExtentTest extentTest;
+	public static ExtentTest extentTest;
 	public static final String filepathname = "target/PIM_Report.html";
 
 	public void BaseTest() {
@@ -64,7 +64,7 @@ public class BaseTest {
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
 		driver.manage().window().maximize();
-		utils = new Utils(driver);
+		utils = new Utils(driver,extentTest);
 		loginPage = new Login_Page(driver);
 		loginPage.LogintoPIM(UseCaseOwner);
 		homePage = new HomePage(driver);

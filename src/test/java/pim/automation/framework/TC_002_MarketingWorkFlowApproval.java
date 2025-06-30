@@ -1,5 +1,9 @@
 package pim.automation.framework;
 
+/************************************************
+TC 06 - Verify user should be able to approve entity pending for "Marketing Workflow".
+Descrption - Assigns the user and complete the record transaction
+************************************************/
 import static org.junit.Assert.assertTrue;
 import java.io.IOException;
 import java.time.Duration;

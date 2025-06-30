@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="pim.automation.framework.TC_002_MarketingWorkFlowApproval">
+      <class name="pim.automation.framework.TC_003_BSAPIE_Test">
         <methods>
+          <include name="BSAPIEOwner"/>
           <include name="setUp"/>
           <include name="Logout"/>
-          <include name="MarketingWorkFlowApproval"/>
           <include name="intitializeReport"/>
           <include name="publishReport"/>
         </methods>
-      </class> <!-- pim.automation.framework.TC_002_MarketingWorkFlowApproval -->
+      </class> <!-- pim.automation.framework.TC_003_BSAPIE_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

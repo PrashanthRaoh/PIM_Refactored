@@ -10,14 +10,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import common_functions.Utils;
 
 public class Login_Page {
 
 	private WebDriver driver;
 	private WebDriverWait wait;
-	public Utils utils;
+	private Utils utils;
 	public HomePage homePage;
 
 	public By emailField = By.cssSelector("[id='username']");
@@ -28,7 +27,7 @@ public class Login_Page {
 		this.driver = driver;
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(50));
 		homePage = new HomePage(driver);
-		utils = new Utils(driver);
+		this.utils = new Utils(driver, null);
 	}
 
 	public void enterEmail(String email) {

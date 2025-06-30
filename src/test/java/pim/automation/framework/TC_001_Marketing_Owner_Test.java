@@ -1,5 +1,9 @@
 package pim.automation.framework;
 
+/************************************************
+TC 02 - Validating the Data Quality Check - Marketing
+Descrption - Enters the long and short description and completes the transaction
+************************************************/
 import static org.junit.Assert.assertTrue;
 import java.io.IOException;
 import java.time.Duration;
@@ -42,14 +46,13 @@ public class TC_001_Marketing_Owner_Test extends BaseTest {
 		Thread.sleep(3000);
 
 		/**************************************************
-		 ***** Verify that logged in user is Marketing owner****************
+		 ***** Verify that logged in user is Marketing owner ****************
 		 **************************************************/
 		WebElement currentloggedinuser = homePage.loggedin_User();
 		System.out.println("Logged in user is  " + currentloggedinuser.getText());
 		test.pass("Current user logged in is " + currentloggedinuser.getText());
 		test.log(Status.PASS, MediaEntityBuilder.createScreenCaptureFromPath(Utils.Takescreenshot(driver)).build());
-		assertTrue("Logged-in user should be Marketing owner",
-				currentloggedinuser.getText().contains("attributeownermarketing.test1"));
+		assertTrue("Logged-in user should be Marketing owner",currentloggedinuser.getText().contains("attributeownermarketing.test1"));
 
 		/***************************************
 		 * ------- Click on Marketing enrichment link in my todos --------- *
